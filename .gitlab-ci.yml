@@ -1,0 +1,10 @@
+image: node:alpine
+before_script:
+  - npm install
+stages:
+  - deploy
+release:
+  stage: deploy
+  script:
+    - echo Running release
+    - npm run ci-publish || true
